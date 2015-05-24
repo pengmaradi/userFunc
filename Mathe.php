@@ -8,7 +8,8 @@ class user_mathe {
                 $this->content .= '<p style="position:absolute;top:100px;left:100px; width:180px;background: #ccf; transform:rotate('.$i.'deg);">'.cos($i).'</p>';
                 $this->content .= '<p style="position:absolute;top:100px;left:300px; width:180px;background: #fcc; transform:rotate(-'.$i.'deg);">'.sin($i).'</p>';
         }
-       
+       // get conf['ab'] from ts
+         $this->content .= $conf['ab'];
         $this->content  =  '<div class="userMathe" style="background: #ccc;">'.$this->content. '</div>';
         return $this->content;
     }
