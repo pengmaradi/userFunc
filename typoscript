@@ -2,6 +2,7 @@ includeLibs.mathe = fileadmin/template/php/Mathe.php
 temp.mathe = USER
 temp.mathe {
   userFunc = user_mathe->main
+  ab = abcdefghijklmn...
 }
 
 page.100 < temp.mathe
