@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:http://www.cabag.ch/
+METHOD:PUBLISH
+BEGIN:VEVENT
+CALSCALE:GREGORIAN
+UID:{event.uid}
+SUMMARY:{event.title}
+DESCRIPTION:<f:if condition="{event.text}"><f:then>{event.text->f:format.html()}</f:then><f:else>{event.title}</f:else></f:if>
+CLASS:PUBLIC
+DTSTART:{event.date->f:format.date(format:'Ymd\THis\Z')}
+DTEND:<f:if condition="{event.enddate}"><f:then>{event.enddate->f:format.date(format:'Ymd')}T235959Z</f:then><f:else>{event.date->f:format.date(format:'Ymd')}T235959Z</f:else></f:if>
+DTSTAMP:{today->f:format.date(format:'Ymd\THis\Z')}
+END:VEVENT
+END:VCALENDAR
